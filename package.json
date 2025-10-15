@@ -1,0 +1,16 @@
+{
+  "name": "ugi-dev",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "render": "node src/main.ts",
+    "portrait": "node scripts/ascii.ts",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "sharp": "^0.34.0",
+    "typescript": "^5.9.0"
+  }
+}
