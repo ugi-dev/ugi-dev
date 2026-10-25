@@ -24,7 +24,7 @@ export const about: Entry[] = [
   ["Frontend", "TypeScript, React, Next.js"],
   ["Backend", "Node, Express, Postgres"],
   ["Design", "Figma, Design Systems"],
-  ["Shipped", "Vortex"],
+  ["Shipped", "Vortex, Kirari"],
 ];
 
 export const comms: Entry[] = [
