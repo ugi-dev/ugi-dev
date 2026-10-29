@@ -47,6 +47,7 @@ function panelLines(stats: Telemetry | null, now: Date) {
 
   if (!stats) return [...lines, ink("comment", "no signal: set ACCESS_TOKEN to pull GitHub stats")];
 
+  const year = now.getUTCFullYear();
   return [
     ...lines,
     pair(["Repos", `${fmt(stats.repos)} (${stats.publicRepos} public)`], ["Stars", fmt(stats.stars)]),
@@ -55,6 +56,7 @@ function panelLines(stats: Telemetry | null, now: Date) {
       "Lines of Code",
       `${fmt(stats.linesAdded - stats.linesRemoved)} (${fmt(stats.linesAdded)}++, ${fmt(stats.linesRemoved)}--)`,
     ),
+    field(`Signal.${year - 1}-${year % 100}`, `${fmt(stats.lastYear)} contributions / 52 weeks`),
   ];
 }
 
@@ -80,8 +82,7 @@ export function renderCard(mode: Mode, portrait: string[], stats: Telemetry | nu
 
   const lines = panelLines(stats, now);
   const signalTop = panel.y + lines.length * panel.lineHeight - 4;
-  const captionY = signalTop + layout.signal.maxHeight + 18;
-  const promptY = captionY + 28;
+  const promptY = signalTop + 60;
   const synced = now.toISOString().slice(0, 10);
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -125,7 +126,6 @@ ${stack(portrait.map(xml), art.x, art.y, art.lineHeight)}
 ${stack(lines, panel.x, panel.y, panel.lineHeight)}
   </text>
   ${stats ? signalBars(stats.weekly, signalTop) : ""}
-  ${stats ? `<text x="${panel.x}" y="${captionY}" font-size="12">${ink("comment", `Signal · last 52 weeks · ${fmt(stats.lastYear)} contributions`)}</text>` : ""}
   <text x="${panel.x}" y="${promptY}" font-size="${panel.fontSize}">${ink("accent", "❯")} ${ink("comment", `last sync ${synced}`)} <tspan class="string caret">▍</tspan></text>
 </g>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="${radius}" fill="none" stroke="${c.hairline}"/>
