@@ -20,8 +20,7 @@ export const about: Entry[] = [
   ["IDE", "Zed"],
   ["Theme", "Ad Astra (made it myself)"],
   null,
-  ["Frontend", "TypeScript, React, Next.js"],
-  ["Backend", "Node, Express, Postgres"],
+  ["Stack", "TypeScript, React, Next.js, Node, Express, Postgres"],
   ["Design", "Figma, Design Systems"],
   ["Shipped", "Vortex, Kirari"],
 ];
@@ -89,6 +88,6 @@ export const layout = {
   titlebar: 36,
   portrait: { x: 24, y: 62, fontSize: 10, lineHeight: 11 },
   plate: { x: 12, y: 48, width: 350, height: 480, radius: 10 },
-  panel: { x: 380, y: 66, fontSize: 14, lineHeight: 18, columns: 62 },
+  panel: { x: 380, y: 66, fontSize: 14, lineHeight: 19, columns: 62 },
   signal: { barWidth: 7, gap: 3, maxHeight: 34 },
 } as const;
