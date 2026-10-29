@@ -15,7 +15,6 @@ export const launchDate = new Date("2020-04-19T00:00:00Z");
 
 export const about: Entry[] = [
   ["Role", "Software Engineer"],
-  ["Base", "ugi.dev"],
   ["Orbit", "{orbit}"],
   ["Shell", "zsh, Ghostty"],
   ["IDE", "Zed"],
