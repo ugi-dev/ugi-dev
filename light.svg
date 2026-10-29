@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="960" height="600" viewBox="0 0 960 600"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="960" height="540" viewBox="0 0 960 540"
      font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,'Liberation Mono',monospace">
 <title>ugi · Software Engineer</title>
 <defs>
@@ -11,7 +11,7 @@
     <stop offset="0" stop-color="#0A8E97"/>
     <stop offset="1" stop-color="#8F4AB8"/>
   </linearGradient>
-  <clipPath id="frame"><rect width="960" height="600" rx="14"/></clipPath>
+  <clipPath id="frame"><rect width="960" height="540" rx="14"/></clipPath>
 </defs>
 <style>
   text, tspan { white-space: pre; }
@@ -24,85 +24,85 @@
   @keyframes blink { 50% { opacity: 0; } }
 </style>
 <g clip-path="url(#frame)">
-  <rect width="960" height="600" fill="#F5F7FC"/>
+  <rect width="960" height="540" fill="#F5F7FC"/>
   <rect width="960" height="36" fill="#EEF2FA"/>
   <rect y="36" width="960" height="1" fill="#DDE3EF"/>
   <circle cx="22" cy="18" r="6" fill="#FF5F57"/>
   <circle cx="42" cy="18" r="6" fill="#FEBC2E"/>
   <circle cx="62" cy="18" r="6" fill="#28C840"/>
   <text x="480" y="23" text-anchor="middle" font-size="12" class="comment">ugi@ad-astra: ~ — neofetch --orbit</text>
-  <rect x="12" y="48" width="350" height="540" rx="10" fill="#161A24"/>
+  <rect x="12" y="48" width="350" height="480" rx="10" fill="#161A24"/>
   <text font-size="10" fill="url(#portrait)" opacity="0.9">
 <tspan x="24" y="62">                                ``''.    .`</tspan>
-<tspan x="24" y="74">                                    `,^'  .=,</tspan>
-<tspan x="24" y="86">               .'^,::;-,^`'^,;;,`''^`.     '^</tspan>
-<tspan x="24" y="98">             `-*|1fxuuvcczYCQQ0OOQJXuf|=;</tspan>
-<tspan x="24" y="110">             ^-!1xcXUUYC0mqqddbkoooakdw0Ucx,`</tspan>
-<tspan x="24" y="122">           ..`:=irzUJJYUQZmmwqpdkaoahbddmZwc~'</tspan>
-<tspan x="24" y="134">           '``:~!1vUUUYUCQ0OmwqpbaookkkdqmZLt+.</tspan>
-<tspan x="24" y="146">           ',,~!lfvUJCCLQ00Q0OZqdaoohkkdqqmCrt^</tspan>
-<tspan x="24" y="158">            '^;*lrcYL0ZZZmZCQ0mdhaaahbdpqmOQvt^</tspan>
-<tspan x="24" y="170">           .`,~=*lxvXCZZ0ZZQ0Zqpbkkhhkkdw0Q0Ul'</tspan>
-<tspan x="24" y="182">           .^;~-~*lffxXYXCCUC00QZmmZOOLC0LLQYl</tspan>
-<tspan x="24" y="194">                   .,+ltjzcrrnj*-:,`^,;=|tvLXi</tspan>
-<tspan x="24" y="206">                       .*zCzl~`      `^:|jvLUuxUx^</tspan>
-<tspan x="24" y="218">                 .'     :Yqqzu!^~- ^tn*=lvC0Jwdv+!</tspan>
-<tspan x="24" y="230">              `;~*+,    ;vmpOmCfilfvCLCQQOmOXvOYu`</tspan>
-<tspan x="24" y="242">          .'`,-+*!*~'   -cmwOmmZCUC0ZwpdbpZQu|YO!</tspan>
-<tspan x="24" y="254">          ,=!it1lt|:.   :XqZ0ZmdkdwqdbbkbdZUvvLz</tspan>
-<tspan x="24" y="266">          ';*lj1ll*^    +cmm0Q0qbhbqqpdppq0zcC0,</tspan>
-<tspan x="24" y="278">           `-|11l|~'   -fUqbO0L0dhhkbbdqmOCnXq!</tspan>
-<tspan x="24" y="290">            ,=|i|+:    `jYCOJxYQLZdbbdpmZQJfzr</tspan>
-<tspan x="24" y="302">            ',-==;.      -*xi*Cbq00wppqmOQXi</tspan>
-<tspan x="24" y="314">             `,;:^        ;i!fUOwqqqqqqZQUf:</tspan>
-<tspan x="24" y="326">             .`.        +:`;,:-ijrcYQm0CUz|</tspan>
-<tspan x="24" y="338">                        *i-;:,-+:,-!rCXcvu-</tspan>
-<tspan x="24" y="350">               '.    .,-*tfuvvzXXnt1uvfff!</tspan>
-<tspan x="24" y="362">               `^`'`:=iffruXJQZmmmCxnj1|+:</tspan>
-<tspan x="24" y="374">                 ...^,,:~+|1xcUCCJc1lt|+v|</tspan>
-<tspan x="24" y="386">                 .`,:~=-=l1zCQQQCcji*-*z0*</tspan>
-<tspan x="24" y="398">                  `;=iil1xvJ0CCXxj*^^tJQQ*</tspan>
-<tspan x="24" y="410">                    ^--=!*|1j1rfl-`=vQ0QQu+-^</tspan>
-<tspan x="24" y="422">                     .``^:,:;--^,~rJ00OOQUQUJZn-</tspan>
-<tspan x="24" y="434">                             ':*rU000OZOQULZ0%$&amp;wx~</tspan>
-<tspan x="24" y="446">                 .'``.    `-|fcUL0OOZZZO0JCOwB%%%WaqU1</tspan>
-<tspan x="24" y="458"> ` ..'            .'`^^,-*lfuzUCQ00ZZZZ00CQQo$B%8oaahh</tspan>
-<tspan x="24" y="470">;;``,`^.    .''``````^:-+lfvXUCCQ00OO00000Cq$BB%8#k#oh</tspan>
-<tspan x="24" y="482">|*;:+*~+:  ..'^,:;;:,;~*ljxcXUJCCLQQLQ0OZCmBBB%&amp;&amp;#baM#</tspan>
-<tspan x="24" y="494">f1!!ifrl1!'.```,;=*!*++!l1fnuczYJJJCCQ0OLwBBBB&amp;M&amp;Mbd#W</tspan>
-<tspan x="24" y="506">cx1jnrzJzcu|--;^,+trxfjjjfrffxcUCCCLO0LLkBBB%&amp;#MWWawhW</tspan>
-<tspan x="24" y="518">UvucYXzCZOQQXn1|*!fXCCUYXzvxrvU0ZmZOQCq&amp;@%%%&amp;W##WWMqwM</tspan>
-<tspan x="24" y="530">CzYUQCCQCOppqwOCXczCOZZOLUzvuXQOZZOZdMB%888&amp;#M##WWWb0h</tspan>
-<tspan x="24" y="542">CYJLO0OmOQ0qbbbbdqmmmZOO0CYzXJ0mqbo8%8&amp;&amp;WMWWo###MWWbQp</tspan>
-<tspan x="24" y="554">LUC0mmZmm0Oqqqdkkkkkbbbbbbdbka#MW&amp;&amp;WWWWMa#WMaooaMWMb0m</tspan>
-<tspan x="24" y="566">LCCZqqmmm00wdqmppdbkhaooo#MMMMMMMMMMMMWoh#Moaaha#M#bOO</tspan>
+<tspan x="24" y="73">                                    `,^'  .=,</tspan>
+<tspan x="24" y="84">               .'^,::;-,^`'^,;;,`''^`.     '^</tspan>
+<tspan x="24" y="95">             `-*|1fxuuvcczYCQQ0OOQJXuf|=;</tspan>
+<tspan x="24" y="106">             ^-!1xcXUUYC0mqqddbkoooakdw0Ucx,`</tspan>
+<tspan x="24" y="117">           ..`:=irzUJJYUQZmmwqpdkaoahbddmZwc~'</tspan>
+<tspan x="24" y="128">           '``:~!1vUUUYUCQ0OmwqpbaookkkdqmZLt+.</tspan>
+<tspan x="24" y="139">           ',,~!lfvUJCCLQ00Q0OZqdaoohkkdqqmCrt^</tspan>
+<tspan x="24" y="150">            '^;*lrcYL0ZZZmZCQ0mdhaaahbdpqmOQvt^</tspan>
+<tspan x="24" y="161">           .`,~=*lxvXCZZ0ZZQ0Zqpbkkhhkkdw0Q0Ul'</tspan>
+<tspan x="24" y="172">           .^;~-~*lffxXYXCCUC00QZmmZOOLC0LLQYl</tspan>
+<tspan x="24" y="183">                   .,+ltjzcrrnj*-:,`^,;=|tvLXi</tspan>
+<tspan x="24" y="194">                       .*zCzl~`      `^:|jvLUuxUx^</tspan>
+<tspan x="24" y="205">                 .'     :Yqqzu!^~- ^tn*=lvC0Jwdv+!</tspan>
+<tspan x="24" y="216">              `;~*+,    ;vmpOmCfilfvCLCQQOmOXvOYu`</tspan>
+<tspan x="24" y="227">          .'`,-+*!*~'   -cmwOmmZCUC0ZwpdbpZQu|YO!</tspan>
+<tspan x="24" y="238">          ,=!it1lt|:.   :XqZ0ZmdkdwqdbbkbdZUvvLz</tspan>
+<tspan x="24" y="249">          ';*lj1ll*^    +cmm0Q0qbhbqqpdppq0zcC0,</tspan>
+<tspan x="24" y="260">           `-|11l|~'   -fUqbO0L0dhhkbbdqmOCnXq!</tspan>
+<tspan x="24" y="271">            ,=|i|+:    `jYCOJxYQLZdbbdpmZQJfzr</tspan>
+<tspan x="24" y="282">            ',-==;.      -*xi*Cbq00wppqmOQXi</tspan>
+<tspan x="24" y="293">             `,;:^        ;i!fUOwqqqqqqZQUf:</tspan>
+<tspan x="24" y="304">             .`.        +:`;,:-ijrcYQm0CUz|</tspan>
+<tspan x="24" y="315">                        *i-;:,-+:,-!rCXcvu-</tspan>
+<tspan x="24" y="326">               '.    .,-*tfuvvzXXnt1uvfff!</tspan>
+<tspan x="24" y="337">               `^`'`:=iffruXJQZmmmCxnj1|+:</tspan>
+<tspan x="24" y="348">                 ...^,,:~+|1xcUCCJc1lt|+v|</tspan>
+<tspan x="24" y="359">                 .`,:~=-=l1zCQQQCcji*-*z0*</tspan>
+<tspan x="24" y="370">                  `;=iil1xvJ0CCXxj*^^tJQQ*</tspan>
+<tspan x="24" y="381">                    ^--=!*|1j1rfl-`=vQ0QQu+-^</tspan>
+<tspan x="24" y="392">                     .``^:,:;--^,~rJ00OOQUQUJZn-</tspan>
+<tspan x="24" y="403">                             ':*rU000OZOQULZ0%$&amp;wx~</tspan>
+<tspan x="24" y="414">                 .'``.    `-|fcUL0OOZZZO0JCOwB%%%WaqU1</tspan>
+<tspan x="24" y="425"> ` ..'            .'`^^,-*lfuzUCQ00ZZZZ00CQQo$B%8oaahh</tspan>
+<tspan x="24" y="436">;;``,`^.    .''``````^:-+lfvXUCCQ00OO00000Cq$BB%8#k#oh</tspan>
+<tspan x="24" y="447">|*;:+*~+:  ..'^,:;;:,;~*ljxcXUJCCLQQLQ0OZCmBBB%&amp;&amp;#baM#</tspan>
+<tspan x="24" y="458">f1!!ifrl1!'.```,;=*!*++!l1fnuczYJJJCCQ0OLwBBBB&amp;M&amp;Mbd#W</tspan>
+<tspan x="24" y="469">cx1jnrzJzcu|--;^,+trxfjjjfrffxcUCCCLO0LLkBBB%&amp;#MWWawhW</tspan>
+<tspan x="24" y="480">UvucYXzCZOQQXn1|*!fXCCUYXzvxrvU0ZmZOQCq&amp;@%%%&amp;W##WWMqwM</tspan>
+<tspan x="24" y="491">CzYUQCCQCOppqwOCXczCOZZOLUzvuXQOZZOZdMB%888&amp;#M##WWWb0h</tspan>
+<tspan x="24" y="502">CYJLO0OmOQ0qbbbbdqmmmZOO0CYzXJ0mqbo8%8&amp;&amp;WMWWo###MWWbQp</tspan>
+<tspan x="24" y="513">LUC0mmZmm0Oqqqdkkkkkbbbbbbdbka#MW&amp;&amp;WWWWMa#WMaooaMWMb0m</tspan>
+<tspan x="24" y="524">LCCZqqmmm00wdqmppdbkhaooo#MMMMMMMMMMMMWoh#Moaaha#M#bOO</tspan>
   </text>
   <text font-size="14">
-<tspan x="380" y="70"><tspan class="text">ugi@ad-astra </tspan><tspan class="leader">─────────────────────────────────────────────────</tspan></tspan>
-<tspan x="380" y="90"><tspan class="accent">Role</tspan><tspan class="leader"> ....................................... </tspan><tspan class="string">Software Engineer</tspan></tspan>
-<tspan x="380" y="110"><tspan class="accent">Orbit</tspan><tspan class="leader"> ............................. </tspan><tspan class="string">6 years, 6 months, 10 days</tspan></tspan>
-<tspan x="380" y="130"><tspan class="accent">Shell</tspan><tspan class="leader"> ........................................... </tspan><tspan class="string">zsh, Ghostty</tspan></tspan>
-<tspan x="380" y="150"><tspan class="accent">IDE</tspan><tspan class="leader"> ...................................................... </tspan><tspan class="string">Zed</tspan></tspan>
-<tspan x="380" y="170"><tspan class="accent">Theme</tspan><tspan class="leader"> .............................. </tspan><tspan class="string">Ad Astra (made it myself)</tspan></tspan>
-<tspan x="380" y="190"></tspan>
-<tspan x="380" y="210"><tspan class="accent">Frontend</tspan><tspan class="leader"> .......................... </tspan><tspan class="string">TypeScript, React, Next.js</tspan></tspan>
-<tspan x="380" y="230"><tspan class="accent">Backend</tspan><tspan class="leader"> .............................. </tspan><tspan class="string">Node, Express, Postgres</tspan></tspan>
-<tspan x="380" y="250"><tspan class="accent">Design</tspan><tspan class="leader"> ................................. </tspan><tspan class="string">Figma, Design Systems</tspan></tspan>
-<tspan x="380" y="270"><tspan class="accent">Shipped</tspan><tspan class="leader"> ....................................... </tspan><tspan class="string">Vortex, Kirari</tspan></tspan>
-<tspan x="380" y="290"></tspan>
-<tspan x="380" y="310"><tspan class="text">Comms </tspan><tspan class="leader">────────────────────────────────────────────────────────</tspan></tspan>
-<tspan x="380" y="330"><tspan class="accent">Web</tspan><tspan class="leader"> .................................................. </tspan><tspan class="string">ugi.dev</tspan></tspan>
-<tspan x="380" y="350"><tspan class="accent">X</tspan><tspan class="leader"> ................................................... </tspan><tspan class="string">@ugi_dev</tspan></tspan>
-<tspan x="380" y="370"><tspan class="accent">GitHub</tspan><tspan class="leader"> ............................................... </tspan><tspan class="string">ugi-dev</tspan></tspan>
-<tspan x="380" y="390"></tspan>
-<tspan x="380" y="410"><tspan class="text">GitHub Stats </tspan><tspan class="leader">─────────────────────────────────────────────────</tspan></tspan>
-<tspan x="380" y="430"><tspan class="accent">Repos</tspan><tspan class="leader"> ........ </tspan><tspan class="string">41 (10 public)</tspan><tspan class="leader"> | </tspan><tspan class="accent">Stars</tspan><tspan class="leader"> .................... </tspan><tspan class="string">94</tspan></tspan>
-<tspan x="380" y="450"><tspan class="accent">Contribs</tspan><tspan class="leader"> .............. </tspan><tspan class="string">9,376</tspan><tspan class="leader"> | </tspan><tspan class="accent">Followers</tspan><tspan class="leader"> ................ </tspan><tspan class="string">10</tspan></tspan>
-<tspan x="380" y="470"><tspan class="accent">Lines of Code</tspan><tspan class="leader"> ........... </tspan><tspan class="string">1,100,241 (2,259,418++, 1,159,177--)</tspan></tspan>
-<tspan x="380" y="490"><tspan class="accent">Signal</tspan><tspan class="leader">.</tspan><tspan class="accent">2025-26</tspan><tspan class="leader"> ................ </tspan><tspan class="string">5,093 contributions / 52 weeks</tspan></tspan>
+<tspan x="380" y="66"><tspan class="text">ugi@ad-astra </tspan><tspan class="leader">─────────────────────────────────────────────────</tspan></tspan>
+<tspan x="380" y="84"><tspan class="accent">Role</tspan><tspan class="leader"> ....................................... </tspan><tspan class="string">Software Engineer</tspan></tspan>
+<tspan x="380" y="102"><tspan class="accent">Orbit</tspan><tspan class="leader"> ............................. </tspan><tspan class="string">6 years, 6 months, 10 days</tspan></tspan>
+<tspan x="380" y="120"><tspan class="accent">Shell</tspan><tspan class="leader"> ........................................... </tspan><tspan class="string">zsh, Ghostty</tspan></tspan>
+<tspan x="380" y="138"><tspan class="accent">IDE</tspan><tspan class="leader"> ...................................................... </tspan><tspan class="string">Zed</tspan></tspan>
+<tspan x="380" y="156"><tspan class="accent">Theme</tspan><tspan class="leader"> .............................. </tspan><tspan class="string">Ad Astra (made it myself)</tspan></tspan>
+<tspan x="380" y="174"></tspan>
+<tspan x="380" y="192"><tspan class="accent">Frontend</tspan><tspan class="leader"> .......................... </tspan><tspan class="string">TypeScript, React, Next.js</tspan></tspan>
+<tspan x="380" y="210"><tspan class="accent">Backend</tspan><tspan class="leader"> .............................. </tspan><tspan class="string">Node, Express, Postgres</tspan></tspan>
+<tspan x="380" y="228"><tspan class="accent">Design</tspan><tspan class="leader"> ................................. </tspan><tspan class="string">Figma, Design Systems</tspan></tspan>
+<tspan x="380" y="246"><tspan class="accent">Shipped</tspan><tspan class="leader"> ....................................... </tspan><tspan class="string">Vortex, Kirari</tspan></tspan>
+<tspan x="380" y="264"></tspan>
+<tspan x="380" y="282"><tspan class="text">Comms </tspan><tspan class="leader">────────────────────────────────────────────────────────</tspan></tspan>
+<tspan x="380" y="300"><tspan class="accent">Web</tspan><tspan class="leader"> .................................................. </tspan><tspan class="string">ugi.dev</tspan></tspan>
+<tspan x="380" y="318"><tspan class="accent">X</tspan><tspan class="leader"> ................................................... </tspan><tspan class="string">@ugi_dev</tspan></tspan>
+<tspan x="380" y="336"><tspan class="accent">GitHub</tspan><tspan class="leader"> ............................................... </tspan><tspan class="string">ugi-dev</tspan></tspan>
+<tspan x="380" y="354"></tspan>
+<tspan x="380" y="372"><tspan class="text">GitHub Stats </tspan><tspan class="leader">─────────────────────────────────────────────────</tspan></tspan>
+<tspan x="380" y="390"><tspan class="accent">Repos</tspan><tspan class="leader"> ........ </tspan><tspan class="string">41 (10 public)</tspan><tspan class="leader"> | </tspan><tspan class="accent">Stars</tspan><tspan class="leader"> .................... </tspan><tspan class="string">94</tspan></tspan>
+<tspan x="380" y="408"><tspan class="accent">Contribs</tspan><tspan class="leader"> .............. </tspan><tspan class="string">9,377</tspan><tspan class="leader"> | </tspan><tspan class="accent">Followers</tspan><tspan class="leader"> ................ </tspan><tspan class="string">10</tspan></tspan>
+<tspan x="380" y="426"><tspan class="accent">Lines of Code</tspan><tspan class="leader"> ........... </tspan><tspan class="string">1,100,241 (2,259,422++, 1,159,181--)</tspan></tspan>
+<tspan x="380" y="444"><tspan class="accent">Signal</tspan><tspan class="leader">.</tspan><tspan class="accent">2025-26</tspan><tspan class="leader"> ................ </tspan><tspan class="string">5,094 contributions / 52 weeks</tspan></tspan>
   </text>
-  <rect x="380" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="390" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="400" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="410" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="420" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="430" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="440" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="450" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="460" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="470" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="480" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="490" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="500" y="534" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.39"/><rect x="510" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.30"/><rect x="520" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="530" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="540" y="535" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="550" y="536" width="7" height="4" rx="1.5" fill="url(#signal)" opacity="0.34"/><rect x="560" y="535" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="570" y="535" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="580" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.40"/><rect x="590" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="600" y="530" width="7" height="10" rx="1.5" fill="url(#signal)" opacity="0.47"/><rect x="610" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="620" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.31"/><rect x="630" y="535" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="640" y="534" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.38"/><rect x="650" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="660" y="535" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="670" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.33"/><rect x="680" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="690" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="700" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="710" y="538" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.29"/><rect x="720" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="730" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="740" y="536" width="7" height="4" rx="1.5" fill="url(#signal)" opacity="0.33"/><rect x="750" y="532" width="7" height="8" rx="1.5" fill="url(#signal)" opacity="0.44"/><rect x="760" y="528" width="7" height="12" rx="1.5" fill="url(#signal)" opacity="0.51"/><rect x="770" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="780" y="537" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="790" y="533" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="800" y="531" width="7" height="9" rx="1.5" fill="url(#signal)" opacity="0.46"/><rect x="810" y="532" width="7" height="8" rx="1.5" fill="url(#signal)" opacity="0.42"/><rect x="820" y="534" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.38"/><rect x="830" y="515" width="7" height="25" rx="1.5" fill="url(#signal)" opacity="0.80"/><rect x="840" y="517" width="7" height="23" rx="1.5" fill="url(#signal)" opacity="0.75"/><rect x="850" y="515" width="7" height="25" rx="1.5" fill="url(#signal)" opacity="0.80"/><rect x="860" y="506" width="7" height="34" rx="1.5" fill="url(#signal)" opacity="1.00"/><rect x="870" y="518" width="7" height="22" rx="1.5" fill="url(#signal)" opacity="0.74"/><rect x="880" y="524" width="7" height="16" rx="1.5" fill="url(#signal)" opacity="0.61"/><rect x="890" y="529" width="7" height="11" rx="1.5" fill="url(#signal)" opacity="0.48"/>
-  <text x="380" y="566" font-size="14"><tspan class="accent">❯</tspan> <tspan class="comment">last sync 2026-10-29</tspan> <tspan class="string caret">▍</tspan></text>
+  <rect x="380" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="390" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="400" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="410" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="420" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="430" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="440" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="450" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="460" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="470" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="480" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="490" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.25"/><rect x="500" y="486" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.39"/><rect x="510" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.30"/><rect x="520" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="530" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.28"/><rect x="540" y="487" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="550" y="488" width="7" height="4" rx="1.5" fill="url(#signal)" opacity="0.34"/><rect x="560" y="487" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="570" y="487" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="580" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.40"/><rect x="590" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="600" y="482" width="7" height="10" rx="1.5" fill="url(#signal)" opacity="0.47"/><rect x="610" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="620" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.31"/><rect x="630" y="487" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="640" y="486" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.38"/><rect x="650" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="660" y="487" width="7" height="5" rx="1.5" fill="url(#signal)" opacity="0.37"/><rect x="670" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.33"/><rect x="680" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.27"/><rect x="690" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="700" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.26"/><rect x="710" y="490" width="7" height="2" rx="1.5" fill="url(#signal)" opacity="0.29"/><rect x="720" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="730" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="740" y="488" width="7" height="4" rx="1.5" fill="url(#signal)" opacity="0.33"/><rect x="750" y="484" width="7" height="8" rx="1.5" fill="url(#signal)" opacity="0.44"/><rect x="760" y="480" width="7" height="12" rx="1.5" fill="url(#signal)" opacity="0.51"/><rect x="770" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="780" y="489" width="7" height="3" rx="1.5" fill="url(#signal)" opacity="0.32"/><rect x="790" y="485" width="7" height="7" rx="1.5" fill="url(#signal)" opacity="0.41"/><rect x="800" y="483" width="7" height="9" rx="1.5" fill="url(#signal)" opacity="0.46"/><rect x="810" y="484" width="7" height="8" rx="1.5" fill="url(#signal)" opacity="0.42"/><rect x="820" y="486" width="7" height="6" rx="1.5" fill="url(#signal)" opacity="0.38"/><rect x="830" y="467" width="7" height="25" rx="1.5" fill="url(#signal)" opacity="0.80"/><rect x="840" y="469" width="7" height="23" rx="1.5" fill="url(#signal)" opacity="0.75"/><rect x="850" y="467" width="7" height="25" rx="1.5" fill="url(#signal)" opacity="0.80"/><rect x="860" y="458" width="7" height="34" rx="1.5" fill="url(#signal)" opacity="1.00"/><rect x="870" y="470" width="7" height="22" rx="1.5" fill="url(#signal)" opacity="0.74"/><rect x="880" y="476" width="7" height="16" rx="1.5" fill="url(#signal)" opacity="0.61"/><rect x="890" y="481" width="7" height="11" rx="1.5" fill="url(#signal)" opacity="0.48"/>
+  <text x="380" y="518" font-size="14"><tspan class="accent">❯</tspan> <tspan class="comment">last sync 2026-10-29</tspan> <tspan class="string caret">▍</tspan></text>
 </g>
-<rect x="0.5" y="0.5" width="959" height="599" rx="14" fill="none" stroke="#DDE3EF"/>
+<rect x="0.5" y="0.5" width="959" height="539" rx="14" fill="none" stroke="#DDE3EF"/>
 </svg>
