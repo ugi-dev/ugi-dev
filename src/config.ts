@@ -20,7 +20,7 @@ export const about: Entry[] = [
   ["IDE", "Zed"],
   ["Theme", "Ad Astra (made it myself)"],
   null,
-  ["Stack", "TypeScript, React, Next.js, Node, Express, Postgres"],
+  ["Stack", "TypeScript, React, Node, Postgres"],
   ["Design", "Figma, Design Systems"],
   ["Shipped", "Vortex, Kirari"],
 ];
