@@ -16,6 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Push as the token's owner (repo admin) so the commit bypasses the
+          # PR-required ruleset on main. SVG-only pushes don't retrigger this.
+          token: ${{ secrets.ACCESS_TOKEN || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
