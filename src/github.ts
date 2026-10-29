@@ -11,15 +11,17 @@ export interface Telemetry {
 const YEAR_MS = 365 * 24 * 60 * 60 * 1000;
 
 // Oldest first, so a page of 100 covers the stars that matter for a past date.
+// Only fetched for past dates: fine-grained tokens can't list stargazers, but can read the count.
 const STARGAZERS = /* GraphQL */ `
-  stargazers(first: 100, orderBy: { field: STARRED_AT, direction: ASC }) {
+  stargazerCount
+  stargazers(first: 100, orderBy: { field: STARRED_AT, direction: ASC }) @include(if: $history) {
     totalCount
     edges { starredAt }
   }
 `;
 
 const PROFILE_QUERY = /* GraphQL */ `
-  query Profile($login: String!, $from: DateTime!, $to: DateTime!) {
+  query Profile($login: String!, $from: DateTime!, $to: DateTime!, $history: Boolean!) {
     user(login: $login) {
       createdAt
       followers { totalCount }
@@ -48,7 +50,7 @@ const WINDOW_QUERY = /* GraphQL */ `
 `;
 
 const ORG_QUERY = /* GraphQL */ `
-  query Org($org: String!) {
+  query Org($org: String!, $history: Boolean!) {
     organization(login: $org) {
       repositories(first: 100) {
         nodes { createdAt ${STARGAZERS} }
@@ -60,7 +62,8 @@ const ORG_QUERY = /* GraphQL */ `
 interface Repo {
   createdAt: string;
   isPrivate: boolean;
-  stargazers: { totalCount: number; edges: { starredAt: string }[] };
+  stargazerCount: number;
+  stargazers?: { totalCount: number; edges: { starredAt: string }[] };
 }
 
 interface ProfileResponse {
@@ -87,9 +90,10 @@ interface OrgResponse {
 
 /** Stars given before `until`. Past the first 100, assume the rest predate it too. */
 function starsBefore(repos: Omit<Repo, "isPrivate">[], until: string) {
-  return repos.reduce((sum, { stargazers: { totalCount, edges } }) => {
-    const counted = edges.filter((e) => e.starredAt < until).length;
-    return sum + (counted === edges.length ? totalCount : counted);
+  return repos.reduce((sum, { stargazerCount, stargazers }) => {
+    if (!stargazers) return sum + stargazerCount;
+    const counted = stargazers.edges.filter((e) => e.starredAt < until).length;
+    return sum + (counted === stargazers.edges.length ? stargazers.totalCount : counted);
   }, 0);
 }
 
@@ -121,11 +125,17 @@ function yearlyWindows(since: Date, until: Date) {
  * Repos, stars and contributions are counted up to `until`, so a card can be rendered
  * as of a past date. Followers and repo visibility only exist as current values.
  */
-export async function fetchTelemetry(login: string, orgs: string[], token: string, until: Date): Promise<Telemetry> {
+export async function fetchTelemetry(
+  login: string,
+  orgs: string[],
+  token: string,
+  until: Date,
+  history: boolean,
+): Promise<Telemetry> {
   const graphql = client(token);
   const cutoff = until.toISOString();
   const lastYear = { from: new Date(until.getTime() - YEAR_MS).toISOString(), to: cutoff };
-  const { user } = await graphql<ProfileResponse>(PROFILE_QUERY, { login, ...lastYear });
+  const { user } = await graphql<ProfileResponse>(PROFILE_QUERY, { login, history, ...lastYear });
 
   const windows = yearlyWindows(new Date(user.createdAt), until);
   const [totals, orgStars] = await Promise.all([
@@ -138,7 +148,7 @@ export async function fetchTelemetry(login: string, orgs: string[], token: strin
     ),
     Promise.all(
       orgs.map((org) =>
-        graphql<OrgResponse>(ORG_QUERY, { org }).then((d) => starsBefore(d.organization.repositories.nodes, cutoff)),
+        graphql<OrgResponse>(ORG_QUERY, { org, history }).then((d) => starsBefore(d.organization.repositories.nodes, cutoff)),
       ),
     ),
   ]);

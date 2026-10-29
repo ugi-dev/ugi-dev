@@ -10,7 +10,7 @@ const token = process.env.ACCESS_TOKEN ?? process.env.GITHUB_TOKEN;
 const day = process.env.CARD_DATE ?? new Intl.DateTimeFormat("en-CA", { timeZone }).format(new Date());
 const now = new Date(`${day}T00:00:00Z`);
 
-const stats = token ? await fetchTelemetry(login, orgs, token, now) : null;
+const stats = token ? await fetchTelemetry(login, orgs, token, now, Boolean(process.env.CARD_DATE)) : null;
 
 const portrait = (await readFile(new URL("assets/ascii.txt", root), "utf8")).trimEnd().split("\n");
 
