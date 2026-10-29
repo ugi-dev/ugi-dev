@@ -47,12 +47,14 @@ function panelLines(stats: Telemetry | null, now: Date) {
 
   if (!stats) return [...lines, ink("comment", "no signal: set ACCESS_TOKEN to pull GitHub stats")];
 
-  const year = now.getUTCFullYear();
   return [
     ...lines,
     pair(["Repos", `${fmt(stats.repos)} (${stats.publicRepos} public)`], ["Stars", fmt(stats.stars)]),
     pair(["Contribs", fmt(stats.allTime)], ["Followers", fmt(stats.followers)]),
-    field(`Signal.${year - 1}-${year % 100}`, `${fmt(stats.lastYear)} contributions / 52 weeks`),
+    field(
+      "Lines of Code",
+      `${fmt(stats.linesAdded - stats.linesRemoved)} (${fmt(stats.linesAdded)}++, ${fmt(stats.linesRemoved)}--)`,
+    ),
   ];
 }
 

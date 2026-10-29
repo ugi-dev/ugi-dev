@@ -6,6 +6,8 @@ export interface Telemetry {
   lastYear: number;
   allTime: number;
   weekly: number[];
+  linesAdded: number;
+  linesRemoved: number;
 }
 
 const YEAR_MS = 365 * 24 * 60 * 60 * 1000;
@@ -27,7 +29,7 @@ const PROFILE_QUERY = /* GraphQL */ `
       followers { totalCount }
       repositories(ownerAffiliations: OWNER, first: 100) {
         totalCount
-        nodes { createdAt isPrivate ${STARGAZERS} }
+        nodes { nameWithOwner createdAt isPrivate ${STARGAZERS} }
       }
       contributionsCollection(from: $from, to: $to) {
         contributionCalendar {
@@ -53,13 +55,14 @@ const ORG_QUERY = /* GraphQL */ `
   query Org($org: String!, $history: Boolean!) {
     organization(login: $org) {
       repositories(first: 100) {
-        nodes { createdAt ${STARGAZERS} }
+        nodes { nameWithOwner createdAt ${STARGAZERS} }
       }
     }
   }
 `;
 
 interface Repo {
+  nameWithOwner: string;
   createdAt: string;
   isPrivate: boolean;
   stargazerCount: number;
@@ -111,6 +114,47 @@ function client(token: string) {
   };
 }
 
+interface ContributorStats {
+  author: { login: string } | null;
+  weeks: { w: number; a: number; d: number }[];
+}
+
+/**
+ * Lines `login` added and removed across `repos`, in weeks starting before `until`.
+ * GitHub computes these stats lazily and answers 202 until they're ready, so keep asking.
+ */
+async function linesOfCode(token: string, login: string, repos: string[], until: Date) {
+  const headers = { authorization: `bearer ${token}`, accept: "application/vnd.github+json" };
+  const cutoff = until.getTime() / 1000;
+  const totals = { added: 0, removed: 0 };
+  let pending = repos;
+
+  for (let attempt = 0; pending.length && attempt < 20; attempt++) {
+    if (attempt) await new Promise((r) => setTimeout(r, 3000));
+    const results = await Promise.all(
+      pending.map(async (repo) => {
+        const res = await fetch(`https://api.github.com/repos/${repo}/stats/contributors`, { headers });
+        if (res.status === 202) return repo;
+        if (res.status === 204) return null;
+        if (!res.ok) throw new Error(`GitHub API ${res.status} for ${repo}: ${await res.text()}`);
+        const mine = ((await res.json()) as ContributorStats[]).find(
+          (c) => c.author?.login.toLowerCase() === login.toLowerCase(),
+        );
+        for (const week of mine?.weeks ?? []) {
+          if (week.w >= cutoff) continue;
+          totals.added += week.a;
+          totals.removed += week.d;
+        }
+        return null;
+      }),
+    );
+    pending = results.filter((r) => r !== null);
+  }
+
+  if (pending.length) throw new Error(`Line stats still computing for ${pending.join(", ")}`);
+  return totals;
+}
+
 /** GitHub caps a contributions window at one year, so slice the account's life into years. */
 function yearlyWindows(since: Date, until: Date) {
   const windows: { from: string; to: string }[] = [];
@@ -138,7 +182,7 @@ export async function fetchTelemetry(
   const { user } = await graphql<ProfileResponse>(PROFILE_QUERY, { login, history, ...lastYear });
 
   const windows = yearlyWindows(new Date(user.createdAt), until);
-  const [totals, orgStars] = await Promise.all([
+  const [totals, orgRepos] = await Promise.all([
     Promise.all(
       windows.map((w) =>
         graphql<WindowResponse>(WINDOW_QUERY, { login, ...w }).then(
@@ -148,23 +192,29 @@ export async function fetchTelemetry(
     ),
     Promise.all(
       orgs.map((org) =>
-        graphql<OrgResponse>(ORG_QUERY, { org, history }).then((d) => starsBefore(d.organization.repositories.nodes, cutoff)),
+        graphql<OrgResponse>(ORG_QUERY, { org, history }).then((d) =>
+          d.organization.repositories.nodes.filter((r) => r.createdAt < cutoff),
+        ),
       ),
     ),
   ]);
 
   const repos = user.repositories.nodes.filter((r) => r.createdAt < cutoff);
   const calendar = user.contributionsCollection.contributionCalendar;
+  const allRepos = [...repos, ...orgRepos.flat()];
+  const lines = await linesOfCode(token, login, allRepos.map((r) => r.nameWithOwner), until);
 
   return {
     repos: repos.length,
     publicRepos: repos.filter((r) => !r.isPrivate).length,
-    stars: starsBefore(repos, cutoff) + orgStars.reduce((a, b) => a + b, 0),
+    stars: starsBefore(allRepos, cutoff),
     followers: user.followers.totalCount,
     lastYear: calendar.totalContributions,
     allTime: totals.reduce((a, b) => a + b, 0),
     weekly: calendar.weeks
       .map((w) => w.contributionDays.reduce((sum, d) => sum + d.contributionCount, 0))
       .slice(-52),
+    linesAdded: lines.added,
+    linesRemoved: lines.removed,
   };
 }
