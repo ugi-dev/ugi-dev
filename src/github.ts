@@ -55,7 +55,7 @@ const ORG_QUERY = /* GraphQL */ `
   query Org($org: String!, $history: Boolean!) {
     organization(login: $org) {
       repositories(first: 100) {
-        nodes { nameWithOwner createdAt ${STARGAZERS} }
+        nodes { nameWithOwner createdAt isPrivate ${STARGAZERS} }
       }
     }
   }
@@ -88,11 +88,11 @@ interface WindowResponse {
 }
 
 interface OrgResponse {
-  organization: { repositories: { nodes: Omit<Repo, "isPrivate">[] } };
+  organization: { repositories: { nodes: Repo[] } };
 }
 
 /** Stars given before `until`. Past the first 100, assume the rest predate it too. */
-function starsBefore(repos: Omit<Repo, "isPrivate">[], until: string) {
+function starsBefore(repos: Repo[], until: string) {
   return repos.reduce((sum, { stargazerCount, stargazers }) => {
     if (!stargazers) return sum + stargazerCount;
     const counted = stargazers.edges.filter((e) => e.starredAt < until).length;
@@ -205,8 +205,8 @@ export async function fetchTelemetry(
   const lines = await linesOfCode(token, login, allRepos.map((r) => r.nameWithOwner), until);
 
   return {
-    repos: repos.length,
-    publicRepos: repos.filter((r) => !r.isPrivate).length,
+    repos: allRepos.length,
+    publicRepos: allRepos.filter((r) => !r.isPrivate).length,
     stars: starsBefore(allRepos, cutoff),
     followers: user.followers.totalCount,
     lastYear: calendar.totalContributions,

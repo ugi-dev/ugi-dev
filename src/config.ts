@@ -4,7 +4,7 @@ export type Entry = readonly [label: string, value: string] | null;
 
 export const login = process.env.GH_LOGIN ?? "ugi-dev";
 
-/** Orgs whose repos count towards Stars, on top of personal ones. */
+/** Orgs whose repos count towards Repos, Stars and Lines of Code, on top of personal ones. */
 export const orgs = ["vortexkit"];
 
 /** Dates on the card (Orbit, last sync) follow this zone, not the CI runner's UTC. */
