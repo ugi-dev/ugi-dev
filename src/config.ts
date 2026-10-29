@@ -84,11 +84,11 @@ export type Mode = keyof typeof palettes;
 
 export const layout = {
   width: 960,
-  height: 600,
+  height: 540,
   radius: 14,
   titlebar: 36,
-  portrait: { x: 24, y: 62, fontSize: 10, lineHeight: 12 },
-  plate: { x: 12, y: 48, width: 350, height: 540, radius: 10 },
-  panel: { x: 380, y: 70, fontSize: 14, lineHeight: 20, columns: 62 },
+  portrait: { x: 24, y: 62, fontSize: 10, lineHeight: 11 },
+  plate: { x: 12, y: 48, width: 350, height: 480, radius: 10 },
+  panel: { x: 380, y: 66, fontSize: 14, lineHeight: 18, columns: 62 },
   signal: { barWidth: 7, gap: 3, maxHeight: 34 },
 } as const;
