@@ -42,10 +42,10 @@ function panelLines(stats: Telemetry | null, now: Date) {
     rule("Comms"),
     ...block(comms, {}),
     "",
-    rule("Telemetry"),
+    rule("GitHub Stats"),
   ];
 
-  if (!stats) return [...lines, ink("comment", "no signal: set ACCESS_TOKEN to pull telemetry")];
+  if (!stats) return [...lines, ink("comment", "no signal: set ACCESS_TOKEN to pull GitHub stats")];
 
   const year = now.getUTCFullYear();
   return [
